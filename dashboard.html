@@ -97,6 +97,10 @@
           <h2>Average Order Value</h2>
         <p>₹ 2500</p>
        </div>
+        <div class="box">
+          <h2>Average Order Value</h2>
+        <p>₹ 2500</p>
+       </div>
        <div class="box">
           <h2>Customer Satisfaction</h2>
         <p>4.5/5</p>
@@ -180,10 +184,11 @@ new Chart(ctx, {
   data: {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
     datasets: [{
-      // remove or keep label, won’t matter if legend is disabled
       label: '# of Votes',
       data: [12, 19, 3, 5, 2],
-      borderWidth: 1
+      borderWidth: 2,
+      borderColor: '#ffcf119b',       // line color
+      backgroundColor: '#ffcf119b'    // point color
     }]
   },
   options: {
@@ -199,6 +204,8 @@ new Chart(ctx, {
     }
   }
 });
+
+
 
 
 
