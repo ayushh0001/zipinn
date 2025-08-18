@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="gst.css" />
+  <style>
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Business Details</h1>
+    <div class="left">
+      <h2>Do you have a GST number?</h2>
+      <div class="checkbox">
+        <div class="yes">
+          <input type="radio" name="gst" id="yes" class="check" value="yes" />
+          <label for="yes">Yes</label>
+          <p>Enter your GSTIN and Sell anywhere easily</p>
+        </div>
+        <div class="no">
+          <input type="radio" name="gst" id="no" class="check" value="no" />
+          <label for="no">No</label>
+          <p>Worry not! You can still sell without a GSTIN.</p>
+        </div>
+      </div>
+
+      <div class="detail">
+        <div class="gstin">
+          <input type="text" placeholder="Enter GSTIN" class="gstin-input" />
+          <input type="button" value="Verify" class="verify" />
+        </div>
+        <div class="uin">
+          <input type="text" placeholder="Enter PAN Details" class="uin-input" />
+          <input type="button" value="Verify" class="verify" />
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <img src="boy-is-showing-online-payment.png" alt="" />
+    </div>
+  </div>
+
+  <script>
+    const yesRadio = document.getElementById("yes");
+    const noRadio = document.getElementById("no");
+    const gstinDiv = document.querySelector(".gstin");
+    const uinDiv = document.querySelector(".uin");
+
+    gstinDiv.style.display = "none";
+    uinDiv.style.display = "none";
+
+    // Card click to select radio
+    document.querySelector(".yes").addEventListener("click", () => {
+      yesRadio.checked = true;
+      gstinDiv.style.display = "block";
+      uinDiv.style.display = "none";
+    });
+
+    document.querySelector(".no").addEventListener("click", () => {
+      noRadio.checked = true;
+      gstinDiv.style.display = "none";
+      uinDiv.style.display = "block";
+    });
+
+    // Keep radio change logic for direct input clicks
+    yesRadio.addEventListener("change", () => {
+      if (yesRadio.checked) {
+        gstinDiv.style.display = "block";
+        uinDiv.style.display = "none";
+      }
+    });
+
+    noRadio.addEventListener("change", () => {
+      if (noRadio.checked) {
+        gstinDiv.style.display = "none";
+        uinDiv.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>

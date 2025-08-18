@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+  <header>
+      <nav>
+          <div class="left">
+            <!-- <img src="profile.jpeg" class="profile" alt=""> -->
+            <p>ZIPIN </p>
+           </div>
+        <div class="right"><ul id="nav-links">
+           <li><a href="#home"> Home</a></li>
+            <li><a href="#benifits">Sell online</a></li>
+            <li><a href="#procedure"> How it works</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+
+            <div class="buttons">
+            <button id="log-in">Log in</button>
+            <button id="sell">Start selling</button>
+            </div>
+           
+        </ul>
+    </div>
+        
+      </nav>
+    </header>
+    <section class="home" id="home">
+        <!-- <div class="content">
+            <h1>Welcome to ZIPIN</h1>
+            <p>Your one-stop platform for local shopping and selling</p>
+            <button class="btn">Explore Now</button>
+        </div> -->
+<div class="main">
+    <div class="info">
+        <h2>Discover Local, Shop Smart - All on one Platform !</h2>
+        <p>Become a Zipin seller and grow your business across india</p>
+        <button class="btn" id="sell">Start selling</button>
+    </div>
+    <div class="image">
+<img src="delivery-location.png" alt="">
+    </div>
+</div>
+
+    </section>
+    <section class="benifits" id="benifits">
+        <h2>Why Suppliers Love ZIPIN</h2>
+        <p>All the benefits that come with selling on Meesho are designed to help you sell more, and make it easier to grow your business.</p>
+        <div class="container">
+            <div class="points">
+                <div class="description">
+                    <h3>Empower Local Dreams</h3>
+                    <p>Support Small Businesses by Shopping with Us. Discover Unique Products, Handcrafted Goods, and Locally Made Essentials, All in One Place</p>
+                </div>
+            </div>
+
+              <div class="points">
+                <div class="description">
+                    <h3>Sell More, Earn More</h3>
+                    <p>Enjoy 0% Commission Fees! We’re Here to Help You Grow Without Taking a Cut from Your Hard-Earned Sales</p>
+                </div>
+            </div>
+
+              <div class="points">
+                <div class="description">
+                    <h3>Shop with Confidence</h3>
+                    <p>Our Platform is Easy to Use, Fully Secure, and Designed for a Seamless Shopping Experience.</p>
+                </div>
+            </div>
+
+              <div class="points">
+                <div class="description">
+                    <h3>From local to global </h3>
+                    <p>We make doing business effortless</p>
+                </div>
+            </div>
+        </div>
+        <!-- <p class="start">Start your journey with ZIPIN</p> -->
+
+    </section>
+    <section class="procedure" id="procedure">
+
+         <h1>How it Works</h1>
+
+        <div class="steps">
+          <div class="vertical">
+            <div class="circle">1</div>
+            <div class="line"></div>
+             <div class="details">
+                <h3>Create account </h3>
+                <p>All you need is a Bank account</p>
+            </div>
+          </div>
+
+          <div class="vertical">
+            <div class="circle">2</div>
+             <div class="line"></div>
+              <div class="details">
+                <h3>List Products </h3>
+                <p>List the product you want to sell in your supplier pannel</p>
+            </div>
+            
+          </div>
+
+          <div class="vertical">
+            <div class="circle">3</div>
+            <div class="line"></div>
+               <div class="details">
+                <h3>Get Orders </h3>
+                <p>Start getting orders from crores of indians actively shopping on our platform </p>
+            </div>
+          </div>
+
+           <div class="vertical">
+            <div class="circle">4</div>
+            <div class="line"></div>
+             <div class="details">
+                <h3>Affordable Shiping </h3>
+                <p>Enjoy affordable shipping to customers across india</p>
+            </div>
+          </div>
+
+           <div class="vertical">
+            <div class="circle">5</div>
+             <div class="details">
+                <h3>Recive Payments </h3>
+                <p>Payments are deposited directly to your bank account</p>
+            </div>
+          </div>
+         
+          
+    </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+      
+       <div class="detail">
+ <div class="form">
+    
+            <form action="">
+                 <h1>We are happy to help you</h1>
+                <p>Need more clarity or have something to say? Drop your thoughts below – we’re listening!</p>
+             <input type="text" id="name" placeholder="Enter full name" required>
+             <input type="email" id="mail" placeholder="Enter Mobile Number / Email ID">
+             <textarea name="review" id="review" placeholder="Write your message here..."></textarea>
+             <button class="s-btn">Submit</button>
+            </form>
+        </div>
+       </div>
+       <div class="d-img">
+<img src="man-searching-location-using-gps.png" alt="">
+       </div>
+    </section>
+   <script>
+    const log_in=document.getElementById("log-in");
+    log_in.addEventListener("click",()=>{
+    window.location.href="login.html"
+})
+
+  const sell=document.querySelectorAll("#sell");
+    sell.forEach(button => {
+      button.addEventListener("click", () => {
+        window.location.href = "signup.html";
+      });
+    });
+   </script>
+</body>
+</html>

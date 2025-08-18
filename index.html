@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change LI Color</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 10px;
+      margin: 5px;
+      background-color: lightgray;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    li.active {
+      background-color: tomato;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>Click on a list item to change its color</h2>
+  <ul id="myList">
+    <li>Task 1</li>
+    <li>Task 2</li>
+    <li>Task 3</li>
+  </ul>
+
+  <script>
+    const items = document.querySelectorAll("#myList li");
+
+    items.forEach(item => {
+      item.addEventListener("click", function() {
+        // remove 'active' class from all li
+        items.forEach(li => li.classList.remove("active"));
+        // add 'active' only to clicked li
+        this.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

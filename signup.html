@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Zipin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="./signup.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><img src="logo.jpeg" alt=""></div>
+
+        <h1>Sign up to ZIPIN</h1>
+        <div class="left">
+             <form action="" id="form">
+
+            <div class="line"></div>
+
+            <label for="name">Email or username</label><br>
+            <input type="text" placeholder="Email or username" id="name"><br>
+            <p id="msg"></p>
+           
+           
+    
+<div class="next" id="next">Next</div>
+         <!-- <input type="submit" class="next" value="Next" id="next"> -->
+      <div class="account">Already have an account? <a href="./login.html">Log in Zipin</a></div>
+
+
+        </form>
+        </div>
+        <div class="right">
+            <img src="sign-up-form.png" alt="">
+        </div>
+
+       
+
+        <!-- <p class="term">This site protected by reCAPTCHA and the google <br> Privacy Policy
+        and Term of Service apply.
+        </p> -->
+
+<script>
+const next=document.getElementById("next");
+next.addEventListener("click",()=>{
+    window.location.href="pnumber.html"
+})
+ const message = document.getElementById("msg");
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+</script>
+    </div>
+</body>
+</html>
