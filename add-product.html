@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="order.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="add-product.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
+     <div class="main">
       <div class="nav">
     <nav>
-        <h3 class="heading">Order Track</h3>
-    
+         <h3 class="heading">ZIPIN Seller Hub</h3>
         <p class="subheading">Manage your Business</p>
        
         <ul id="myList">
@@ -78,7 +77,7 @@
             <li id="products"><a href="products.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="list-format">
   <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"></path>
 </svg>Products</a></li>
-<li><a href="add-product.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="add-book">
+<li id="add"><a href="add-product.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="add-book">
   <path d="M13,9H11V7A1,1,0,0,0,9,7V9H7a1,1,0,0,0,0,2H9v2a1,1,0,0,0,2,0V11h2a1,1,0,0,0,0-2Zm5,6V5a3,3,0,0,0-3-3H5A3,3,0,0,0,2,5V15a3,3,0,0,0,3,3H15A3,3,0,0,0,18,15ZM4,15V5A1,1,0,0,1,5,4H15a1,1,0,0,1,1,1V15a1,1,0,0,1-1,1H5A1,1,0,0,1,4,15ZM21,6a1,1,0,0,0-1,1V17a3,3,0,0,1-3,3H7a1,1,0,0,0,0,2H17a5,5,0,0,0,5-5V7A1,1,0,0,0,21,6Z"></path>
 </svg>Add Product</a></li>
             <li><a href="customer.html"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50 50" id="customers">
@@ -94,126 +93,170 @@
     </nav>
   </div>
 <div class="o-table">
-    <h2 class="head">
-        <div><h2>Orders</h2></div>
-        <div><button class="btn">New Order</button></div>
-    </h2>
-    <div class="search">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="magnifier">
-  <path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path>
-</svg> -->
-        <input type="text" placeholder="Search orders..." >
-    </div>
-    <div class="status">
-         <div class="tabs">
-    <div class="tab active">All</div>
-    <div class="tab">Pending</div>
-    <div class="tab">Processing</div>
-    <div class="tab">Shipped</div>
+    <div class="head">
+        <h2 class="heading">Add New Product</h2>
+       <p class="subheading">Fill in the Details to add your product</p>
+       </div>
+
+	     <div class="form-container">
+    <form>
+      <!-- Row 1 -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input type="text" id="productName" placeholder="Enter product name">
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+        <select id="category">
+  <option>Select a category</option>
+  <option>Electronics</option>
+  <option>Clothing & Fashion</option>
+  <option>Home & Garden</option>
+  <option>Sports & Outdoors</option>
+  <option>Books & Media</option>
+  <option>Health & Beauty</option>
+  <option>Toys & Games</option>
+  <option>Automotive</option>
+  <option>Food & Beverages</option>
+  <option>Other</option>
+</select>
+
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Describe your product in detail..."></textarea>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="price">Price (₹)</label>
+          <input type="number" id="price" placeholder="0.00" step="0.01">
+        </div>
+        <div class="form-group">
+          <label for="inventory">Inventory Quantity</label>
+          <input type="number" id="inventory" value="0">
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="form-row">
+        <!-- <label for="productImage">Product Images</label>
+        <div class="upload-group">
+          <input type="text" id="productImage" placeholder="Enter image URL">
+		  <input type="file" src="upload-icon.png" alt="Upload"> -->
+          <!-- <button class="upload-btn">⮝</button> -->
+		     <label class="upload-box">
+    <input type="file" id="fileInput" multiple accept="image/*">
+    <p>📂 Click to upload images</p>
+    <div class="preview" id="preview"></div>
+</label>
+</div>
+<button class="submit-btn">Add Product</button>
+      </div>
+
+	  <!-- <div class="form-group">
+		<label for="additionalImages">Additional Images</label>
+		<div class="upload-group">
+		  <input type="text" id="additionalImages" placeholder="Enter image URL">
+		  <button class="upload-btn">⮝</button>
+		</div>
+	  </div> -->
+
+    </form>
+  </div>
+</div>
+
 </div>
 </div>
-<div class="line"></div>
-    <div class="order-table">
-          <table>
-    <thead>
-      <tr>
-        <th>Order Number</th>
-        <th>Date</th>
-        <th>Customer</th>
-        <th>Items</th>
-        <th>Total</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>#12345</td>
-        <td><a href="#">2023-08-15</a></td>
-        <td><a href="#">Ava Bennett</a></td>
-        <td><a href="#">2 items</a></td>
-        <td>₹150.00</td>
-        <td><span class="status pending">Pending</span></td>
-      </tr>
-      <tr>
-        <td>#12346</td>
-        <td><a href="#">2023-08-14</a></td>
-        <td><a href="#">Owen Carter</a></td>
-        <td><a href="#">3 items</a></td>
-        <td>₹220.00</td>
-        <td><span class="status processing">Processing</span></td>
-      </tr>
-      <tr>
-        <td>#12347</td>
-        <td><a href="#">2023-08-13</a></td>
-        <td><a href="#">Chloe Davis</a></td>
-        <td><a href="#">1 item</a></td>
-        <td>₹80.00</td>
-        <td><span class="status shipped">Shipped</span></td>
-      </tr>
-      <tr>
-        <td>#12348</td>
-        <td><a href="#">2023-08-12</a></td>
-        <td><a href="#">Ethan Foster</a></td>
-        <td><a href="#">2 items</a></td>
-        <td>₹180.00</td>
-        <td><span class="status delivered">Delivered</span></td>
-      </tr>
-      <tr>
-        <td>#12349</td>
-        <td><a href="#">2023-08-11</a></td>
-        <td><a href="#">Mia Green</a></td>
-        <td><a href="#">4 items</a></td>
-        <td>₹300.00</td>
-        <td><span class="status cancelled">Cancelled</span></td>
-      </tr>
+  <!-- <script>
+    const fileInput = document.getElementById("fileInput");
+    const preview = document.getElementById("preview");
 
-     
-    </tbody>
-  </table>
-    </div>
-</div>
-</div>
- <script>
-    const tabs = document.querySelectorAll('.tab');
+    let selectedFiles = [];
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Remove active from all
-        tabs.forEach(t => t.classList.remove('active'));
-        // Add active to clicked tab
-        tab.classList.add('active');
-      });
-    });
+    fileInput.addEventListener("change", () => {
+      const files = Array.from(fileInput.files);
 
-
-
-   
-document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll(".tab"); // your tab buttons
-  const rows = document.querySelectorAll("tbody tr"); // all table rows
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", function () {
-      const filter = this.textContent.trim(); // Tab text (All, Pending, Processing, Shipped...)
-
-      // Remove active class from all tabs
-      tabs.forEach(t => t.classList.remove("active"));
-      this.classList.add("active");
-
-      rows.forEach(row => {
-        const status = row.querySelector("td:last-child").textContent.trim();
-
-        if (filter === "All" || status === filter) {
-          row.style.display = ""; // show
-        } else {
-          row.style.display = "none"; // hide
+      files.forEach(file => {
+        if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
+          selectedFiles.push(file);
         }
       });
-    });
-  });
-});
-</script>
 
+      preview.innerHTML = "";
+      selectedFiles.forEach(showPreview);
+
+      fileInput.value = "";
+    });
+
+    function showPreview(file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const item = document.createElement("div");
+        item.classList.add("preview-item");
+
+        const img = document.createElement("img");
+        img.src = reader.result;
+
+        const removeBtn = document.createElement("button");
+        removeBtn.classList.add("remove-btn");
+        removeBtn.innerHTML = "×";
+
+        removeBtn.addEventListener("click", (event) => {
+          event.stopPropagation(); // ✅ Prevents opening file dialog
+          selectedFiles = selectedFiles.filter(f => !(f.name === file.name && f.size === file.size));
+          item.remove();
+        });
+
+        item.appendChild(img);
+        item.appendChild(removeBtn);
+        preview.appendChild(item);
+      };
+      reader.readAsDataURL(file);
+    }
+  </script> -->
+
+
+
+
+
+
+   <script>
+    const fileInput = document.getElementById("fileInput");
+    const preview = document.getElementById("preview");
+
+    fileInput.addEventListener("change", () => {
+      const files = fileInput.files;
+
+      Array.from(files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const item = document.createElement("div");
+          item.classList.add("preview-item");
+
+          const img = document.createElement("img");
+          img.src = reader.result;
+
+          const removeBtn = document.createElement("button");
+          removeBtn.classList.add("remove-btn");
+          removeBtn.innerHTML = "×";
+
+          removeBtn.addEventListener("click", () => {
+            item.remove();
+          });
+
+          item.appendChild(img);
+          item.appendChild(removeBtn);
+          preview.appendChild(item);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
   </script>
 </body>
 </html>

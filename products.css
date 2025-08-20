@@ -169,9 +169,10 @@ ul a svg {
          color: green;
      
     }
- li:hover {
+     li:hover {
       background-color: #f0f0f0;
     }
+
 .o-table{
     width: 100%;
     margin-left: 20px;
@@ -230,126 +231,111 @@ h2 {
     border-color: #ffcc00;
     box-shadow: 0 0 5px rgba(255, 198, 10, 0.5);
 }
-
-
-.tabs {
-      display: flex;
-      gap: 30px;
-    
-      padding: 10px 0;
-      margin-left: 5px;
-    }
-
-    .tab {
-      position: relative;
-      padding: 8px 0;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 500;
-      color: #4a6fa5;
-      transition: color 0.2s ease;
-    }
-
-    .tab:hover {
-      color: #1a4e8a;
-    }
-
-    .tab.active {
-      font-weight: 700;
-      color:#000000d8;
-    }
-
-    .tab.active::after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background-color: #f4c507d8;
-      border-radius: 2px;
-    }
-   .line{
-    height: 1px;
-    background-color: #47474737;
-
-   width: 98%;
-   }
-
-    #orders {
-      background-color: #ffcf119b;
+#products{
+     background-color: #ffcf119b;
       color: white;
-    }
+}
 
-     table {
-      width: 98%;
+ table {
       border-collapse: collapse;
-      background: #fff;
+      width: 98%;
+   margin-top: 40px;
+      background: white;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-top: 40px;
-       border: 1px solid black;
-     
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      table-layout: fixed; /* ensures equal column handling */
     }
 
-
     th, td {
-      padding: 14px 16px;
       text-align: left;
-      font-size: 14px;
-      border-bottom: 1px solid #e5e7eb;
+      padding: 14px;
+      word-wrap: break-word;
     }
 
     th {
-      background:#ffcf119b;
-      font-weight: 600;
-      color: #374151;
+          background:#ffcf119b;
+     
+      font-weight: bold;
     }
 
-    tr:last-child td {
-      border-bottom: none;
+    tr {
+      border-bottom: 1px solid #e5e7eb;
     }
 
-    a {
-      color: #000000ed;
-      text-decoration: none;
-      font-weight: 500;
+    /* Fix column widths */
+    th:nth-child(1), td:nth-child(1) { width: 40%; } /* Product */
+    th:nth-child(2), td:nth-child(2) { width: 15%; } /* Price */
+    th:nth-child(3), td:nth-child(3) { width: 20%; } /* Category */
+    th:nth-child(4), td:nth-child(4) { width: 25%; } /* Availability */
+
+    /* Category tags */
+    .tag {
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .personal { background: #f3e8ff; color: #7e22ce; }
+    .apparel { background: #e0f2fe; color: #0284c7; }
+    .stationery { background: #dcfce7; color: #15803d; }
+    .kitchen { background: #ffedd5; color: #c2410c; }
+    .home { background: #ffe4e6; color: #be123c; }
+
+    /* Toggle Switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+      vertical-align: middle;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #2563eb;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
     }
 
     .status {
+      margin-left: 10px;
+      font-weight: bold;
       display: inline-block;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      text-align: center;
+      min-width: 85px; /* keeps size consistent */
     }
 
-    .pending {
-      background: #fef3c7;
-      color: #92400e;
-    }
-
-    .processing {
-      background: #dbeafe;
-      color: #1e40af;
-    }
-
-    .shipped {
-      background: #dcfce7;
-      color: #166534;
-    }
-
-    .delivered {
-      background: #e0f2fe;
-      color: #075985;
-    }
-    .cancelled {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
+    .available { color: green; }
+    .out { color: gray; }

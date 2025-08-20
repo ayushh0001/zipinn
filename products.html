@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="order.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="products.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
+     <div class="main">
       <div class="nav">
     <nav>
-        <h3 class="heading">Order Track</h3>
-    
+         <h3 class="heading">ZIPIN Seller Hub</h3>
         <p class="subheading">Manage your Business</p>
        
         <ul id="myList">
@@ -75,7 +74,7 @@
 				C270.9,448.8,299.4,456.3,324.2,443.2L324.2,443.2z"></path>
 </svg>Orders</a></li>
 
-            <li id="products"><a href="products.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="list-format">
+<li id="products"><a href="products.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="list-format">
   <path d="M3.71,16.29a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21,1,1,0,0,0-.21.33,1,1,0,0,0,.21,1.09,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1,1,0,0,0,.21-1.09A1,1,0,0,0,3.71,16.29ZM7,8H21a1,1,0,0,0,0-2H7A1,1,0,0,0,7,8ZM3.71,11.29a1,1,0,0,0-1.09-.21,1.15,1.15,0,0,0-.33.21,1,1,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21.94.94,0,0,0,.76,0,1.15,1.15,0,0,0,.33-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1,1,0,0,0,3.71,11.29ZM21,11H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2ZM3.71,6.29a1,1,0,0,0-.33-.21,1,1,0,0,0-1.09.21,1.15,1.15,0,0,0-.21.33.94.94,0,0,0,0,.76,1.15,1.15,0,0,0,.21.33,1.15,1.15,0,0,0,.33.21,1,1,0,0,0,1.09-.21,1.15,1.15,0,0,0,.21-.33.94.94,0,0,0,0-.76A1.15,1.15,0,0,0,3.71,6.29ZM21,16H7a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"></path>
 </svg>Products</a></li>
 <li><a href="add-product.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="add-book">
@@ -95,125 +94,101 @@
   </div>
 <div class="o-table">
     <h2 class="head">
-        <div><h2>Orders</h2></div>
-        <div><button class="btn">New Order</button></div>
+        <div><h2>Products</h2></div>
+        <div><button class="btn">Add Product</button></div>
     </h2>
     <div class="search">
         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="magnifier">
   <path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path>
 </svg> -->
-        <input type="text" placeholder="Search orders..." >
+        <input type="text" placeholder="Search Products..." >
     </div>
-    <div class="status">
-         <div class="tabs">
-    <div class="tab active">All</div>
-    <div class="tab">Pending</div>
-    <div class="tab">Processing</div>
-    <div class="tab">Shipped</div>
-</div>
-</div>
-<div class="line"></div>
-    <div class="order-table">
-          <table>
+    <table>
     <thead>
       <tr>
-        <th>Order Number</th>
-        <th>Date</th>
-        <th>Customer</th>
-        <th>Items</th>
-        <th>Total</th>
-        <th>Status</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Availability</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>#12345</td>
-        <td><a href="#">2023-08-15</a></td>
-        <td><a href="#">Ava Bennett</a></td>
-        <td><a href="#">2 items</a></td>
-        <td>₹150.00</td>
-        <td><span class="status pending">Pending</span></td>
+        <td>Eco-Friendly Bamboo Toothbrush</td>
+        <td>₹49.99</td>
+        <td><span class="tag personal">Personal Care</span></td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" checked onchange="toggleStatus(this)">
+            <span class="slider"></span>
+          </label>
+          <span class="status available">Available</span>
+        </td>
       </tr>
       <tr>
-        <td>#12346</td>
-        <td><a href="#">2023-08-14</a></td>
-        <td><a href="#">Owen Carter</a></td>
-        <td><a href="#">3 items</a></td>
-        <td>₹220.00</td>
-        <td><span class="status processing">Processing</span></td>
+        <td>Organic Cotton T-Shirt</td>
+        <td>₹1999.99</td>
+        <td><span class="tag apparel">Apparel</span></td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" checked onchange="toggleStatus(this)">
+            <span class="slider"></span>
+          </label>
+          <span class="status available">Available</span>
+        </td>
       </tr>
       <tr>
-        <td>#12347</td>
-        <td><a href="#">2023-08-13</a></td>
-        <td><a href="#">Chloe Davis</a></td>
-        <td><a href="#">1 item</a></td>
-        <td>₹80.00</td>
-        <td><span class="status shipped">Shipped</span></td>
+        <td>Recycled Paper Notebook</td>
+        <td>₹75.50</td>
+        <td><span class="tag stationery">Stationery</span></td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" onchange="toggleStatus(this)">
+            <span class="slider"></span>
+          </label>
+          <span class="status out">Out of stock</span>
+        </td>
       </tr>
       <tr>
-        <td>#12348</td>
-        <td><a href="#">2023-08-12</a></td>
-        <td><a href="#">Ethan Foster</a></td>
-        <td><a href="#">2 items</a></td>
-        <td>₹180.00</td>
-        <td><span class="status delivered">Delivered</span></td>
+        <td>Reusable Silicone Food Bags</td>
+        <td>₹120.99</td>
+        <td><span class="tag kitchen">Kitchen</span></td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" checked onchange="toggleStatus(this)">
+            <span class="slider"></span>
+          </label>
+          <span class="status available">Available</span>
+        </td>
       </tr>
       <tr>
-        <td>#12349</td>
-        <td><a href="#">2023-08-11</a></td>
-        <td><a href="#">Mia Green</a></td>
-        <td><a href="#">4 items</a></td>
-        <td>₹300.00</td>
-        <td><span class="status cancelled">Cancelled</span></td>
+        <td>Natural Soy Wax Candle</td>
+        <td>₹145.50</td>
+        <td><span class="tag home">Home Decor</span></td>
+        <td>
+          <label class="switch">
+            <input type="checkbox" onchange="toggleStatus(this)">
+            <span class="slider"></span>
+          </label>
+          <span class="status out">Out of stock</span>
+        </td>
       </tr>
-
-     
     </tbody>
   </table>
-    </div>
-</div>
-</div>
- <script>
-    const tabs = document.querySelectorAll('.tab');
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Remove active from all
-        tabs.forEach(t => t.classList.remove('active'));
-        // Add active to clicked tab
-        tab.classList.add('active');
-      });
-    });
-
-
-
-   
-document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll(".tab"); // your tab buttons
-  const rows = document.querySelectorAll("tbody tr"); // all table rows
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", function () {
-      const filter = this.textContent.trim(); // Tab text (All, Pending, Processing, Shipped...)
-
-      // Remove active class from all tabs
-      tabs.forEach(t => t.classList.remove("active"));
-      this.classList.add("active");
-
-      rows.forEach(row => {
-        const status = row.querySelector("td:last-child").textContent.trim();
-
-        if (filter === "All" || status === filter) {
-          row.style.display = ""; // show
-        } else {
-          row.style.display = "none"; // hide
-        }
-      });
-    });
-  });
-});
-</script>
-
+  <script>
+    function toggleStatus(checkbox) {
+      let status = checkbox.closest("td").querySelector(".status");
+      if (checkbox.checked) {
+        status.textContent = "Available";
+        status.className = "status available";
+      } else {
+        status.textContent = "Out of stock";
+        status.className = "status out";
+      }
+    }
   </script>
+</div>
+</div>
 </body>
 </html>
